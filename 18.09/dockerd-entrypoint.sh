@@ -182,6 +182,6 @@ else
 	set -- docker-entrypoint.sh "$@"
 fi
 
-/bin/sh -c "iptables -N DOCKER-USER; iptables -I DOCKER-USER -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu; dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375"
+/bin/sh -c "iptables -N DOCKER-USER; iptables -I DOCKER-USER -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu;"
 
 exec "$@"
