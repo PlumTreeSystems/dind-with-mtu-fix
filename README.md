@@ -4,5 +4,5 @@ We were having issues fetching packages from some remote repositories via the co
 
 Using a workaround provided by a [kind fellow](https://discourse.drone.io/t/docker-mtu-problem/1207/4) - we made an image that solved our issue (by extending the docker entrypoint script provided by the docker team that made the dind image).
 
-# Docker hub *
+# Docker hub
 [Link](https://hub.docker.com/repository/docker/plumtreesystems/dind-with-mtu-fix)
